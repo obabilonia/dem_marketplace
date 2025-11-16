@@ -13,7 +13,7 @@ impl<T: Config> Pallet<T> {
         - Use `BlakeTwo256` to calculate the `hash_of` the unique payload.
         - Return the hash as a `[u8; 32]`.
     */
-    pub fn gen_dna(unique_payload) -> [u8; 32] {
+    pub fn gen_dna() -> [u8; 32] {
         // Collect our unique inputs into a single object.
         let parent_hash_ = frame_system::Pallet::<T>::parent_hash();
         let block_number_ = frame_system::Pallet::<T>::block_number();        
